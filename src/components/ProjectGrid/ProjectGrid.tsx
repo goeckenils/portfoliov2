@@ -102,12 +102,19 @@ export default function ProjectGrid() {
                  </span>
               </div>
             </div>
-            <div className="project-title">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 group-hover:opacity-60 transition-opacity">
+            <div className="project-title mt-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-1 group-hover:text-gray-600 transition-colors">
                 {project.title}
               </h3>
-              <p className="text-sm tracking-wide text-gray-600">
-                {project.category}
+              <div className="flex flex-wrap gap-2 mb-3">
+                {project.tech?.map((t) => (
+                  <span key={t} className="text-xs font-mono bg-gray-100 px-2 py-1 rounded text-gray-600 border border-gray-200">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <p className="text-gray-600 text-sm md:text-base line-clamp-2">
+                {project.description}
               </p>
             </div>
           </TransitionLink>
