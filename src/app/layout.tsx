@@ -34,6 +34,9 @@ const gattica = localFont({
 export const metadata: Metadata = {
   title: 'Nils Goecke | Digital Portfolio',
   description: 'Nils Goecke - Blending UI/UX, 3D Design, and Fullstack Engineering into seamless digital experiences.',
+  icons: {
+    icon: '/icon',
+  },
 };
 
 export default function RootLayout({
