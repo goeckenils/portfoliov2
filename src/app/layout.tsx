@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import './globals.css';
 import Navigation from '@/components/Navigation/Navigation';
@@ -47,7 +48,9 @@ export default function RootLayout({
         <CustomCursor />
           <TransitionProvider>
             <Navigation />
-            <Sidebar />
+            <Suspense fallback={null}>
+              <Sidebar />
+            </Suspense>
 
             <SmoothScrollProvider>
               <div id="smooth-wrapper">

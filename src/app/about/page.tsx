@@ -27,8 +27,8 @@ export default function AboutPage() {
   }, []);
 
   // Create quickSetters for performance
-  const xSet = useRef<((value: number) => void) | null>(null);
-  const ySet = useRef<((value: number) => void) | null>(null);
+  const xSet = useRef<any>(null);
+  const ySet = useRef<any>(null);
 
   useEffect(() => {
     // Initialize quickSetters

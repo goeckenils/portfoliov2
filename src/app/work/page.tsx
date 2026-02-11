@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import TransitionLink from '@/components/common/TransitionLink';
 import { gsap, ScrollTrigger, Flip } from '@/lib/gsap-config';
 
 import { projects, Project } from '@/data/projects';
 
-export default function WorkPage() {
+function WorkContent() {
   const gridRef = useRef<HTMLDivElement>(null);
   const searchParams = useSearchParams();
   const filter = searchParams.get('filter') || '';
@@ -167,5 +167,13 @@ export default function WorkPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function WorkPage() {
+  return (
+    <Suspense>
+      <WorkContent />
+    </Suspense>
   );
 }
