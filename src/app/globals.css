@@ -2,7 +2,7 @@
 
 @theme {
   --font-family-sans: var(--font-gattica), system-ui, sans-serif;
-  --font-family-mono: var(--font-geist-mono), monospace;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --width-column: 18rem;
 
   /* Unified Border Radius (6-8px) */
