@@ -54,6 +54,7 @@ export default function RootLayout({
                 <div id="smooth-content">
                   <PageTransitionWrapper>
                     {children}
+                    <>test</>
                     <Footer />
                   </PageTransitionWrapper>
                 </div>
